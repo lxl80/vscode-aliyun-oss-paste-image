@@ -1,0 +1,101 @@
+{
+	"name": "aliyun-oss-paste-image",
+	"displayName": "upload image to aliyun oss",
+	"description": "一键上传截图到阿里云oss",
+	"version": "1.0.0",
+	"publisher": "lixl",
+	"author": {
+		"name": "悟尘",
+		"email": "me@lixl.cn"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lxl80/vsocde-aliyun-oss-paste-image.git"
+	},
+	"homepage": "https://github.com/lxl80/vscode-aliyun-oss-paste-image",
+	"bugs": {
+		"url": "https://github.com/lxl80/vscode-aliyun-oss-paste-image/issues"
+	},
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"main": "./extension",
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "extension.aliyun.oss.paste.image",
+				"key": "shift+p",
+				"mac": "shift+p",
+				"when": "editorTextFocus && editorLangId == 'markdown'"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "一键上传截图到阿里云oss插件配置",
+			"properties": {
+				"aliyun-oss-paste-image.region": {
+					"type": "string",
+					"default": "",
+					"description": "地区，如oss-cn-beijing.aliyuncs.com中的oss-cn-beijing就是region"
+				},
+				"aliyun-oss-paste-image.accessKeyId": {
+					"type": "string",
+					"default": "",
+					"description": "accessKeyId（RAM中生成的accessKeyId）"
+				},
+				"aliyun-oss-paste-image.accessKeySecret": {
+					"type": "string",
+					"default": "",
+					"description": "accessKeySecret（RAM中生成的accessKeySecret）"
+				},
+				"aliyun-oss-paste-image.bucket": {
+					"type": "string",
+					"default": "",
+					"description": "输入你的bucket名称"
+				},
+				"aliyun-oss-paste-image.remotePath": {
+					"type": "string",
+					"default": "",
+					"description": "remotePath，图片存储目录，例如希望的图片地址为http://${你的域名}/static/filename.png，则这里填写static）"
+				},
+				"aliyun-oss-paste-image.domain": {
+					"type": "string",
+					"default": "",
+					"description": "阿里云oss域名，建议绑定自定义域名并开启CDN加速"
+				},
+				"aliyun-oss-paste-image.localTempPath": {
+					"type": "string",
+					"default": "/tmp/.aliyun-oss-paste-image",
+					"description": "本地临时文件路径（默认: /tmp/.aliyun-oss-paste-image）"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.5",
+		"@types/node": "^10.12.18",
+		"eslint": "^5.11.1",
+		"mocha": "^5.2.0",
+		"typescript": "^3.2.2",
+		"vscode": "^1.0.0"
+	},
+	"dependencies": {
+		"ali-oss": "^6.0.2",
+		"axios": "^0.18.0",
+		"moment": "^2.18.1",
+		"shelljs": "^0.8.3"
+	},
+	"__metadata": {
+		"publisherDisplayName": "悟尘"
+	}
+}

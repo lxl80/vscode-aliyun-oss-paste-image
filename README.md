@@ -1,8 +1,8 @@
 # aliyun-oss-paste-image
 
-VSCode扩展插件，在 markdown 类型文件编辑过程中，支持一键粘贴截图上传到阿里云OSS。
+VSCode扩展插件，在 Markdown 类型文件编辑过程中，支持一键上传截图到阿里云OSS并将图片粘贴到博文中。
 
-详见博文：[aliyun-oss-paste-image 插件安装使用指南](https://www.lixl.cn/2020/020936412.html)。
+详见博文：[aliyun-oss-paste-image 插件安装使用指南](https://www.lixl.cn/2020/021737756.html)。
 
 ## 理想的 Markdown 博文写作及发布体验
 
@@ -17,11 +17,13 @@ VSCode扩展插件，在 markdown 类型文件编辑过程中，支持一键粘�
 
 ## 安装
 
-在插件应用商店搜索 `aliyun-oss-paste-image` ，点击 `install` 安装。
+在插件应用商店搜索 `aliyun-oss-paste-image` ，点击 `install` 安装。如图:
+
+![插件检索及安装](https://pic.lixl.cn/2020/15da665cf0d5309abc2b054508b61d76.png)
 
 ## 使用
 
-先截图，然后在 markdown 文件编辑过程中，使用 `Shift + p` 一键上传。
+先截图/复制图片内容，然后在 markdown 文件编辑过程中，使用 `Shift + p` 一键上传并粘贴图片。
 
 ## 参数设置
 
@@ -29,7 +31,7 @@ VSCode扩展插件，在 markdown 类型文件编辑过程中，支持一键粘�
 - `accessKeyId`: accessKeyId（RAM中生成的accessKeyId）
 - `accessKeySecret`: accessKeySecret（RAM中生成的accessKeySecret）
 - `bucket`: 输入bucket名称
-- `remotePath`: 图片存储目录，例如希望的图片地址为 `http://${你的域名}/static/${filename}.png`，则这里填写 `static` ）
+- `remotePath`: 图片存储目录。例如希望的图片地址为 `http://${你的域名}/static/${filename}.png`，则填写 `static` ）
 - `domain`: 阿里云oss域名，建议绑定自定义域名并开启CDN加速
 - `localTempPath`: 本地临时文件路径（默认: /tmp/.aliyun-oss-paste-image）
 

@@ -1,9 +1,10 @@
 {
 	"name": "aliyun-oss-paste-image",
-	"displayName": "upload image to aliyun oss",
-	"description": "一键上传截图到阿里云oss",
-	"version": "1.0.0",
+	"displayName": "aliyun-oss-paste-image",
+	"description": "上传截图到阿里云OSS并将图片粘贴到博文中",
+	"version": "1.0.4",
 	"publisher": "lixl",
+	"icon": "lib/icon.png",
 	"author": {
 		"name": "悟尘",
 		"email": "me@lixl.cn"
@@ -12,7 +13,7 @@
 		"type": "git",
 		"url": "https://github.com/lxl80/vsocde-aliyun-oss-paste-image.git"
 	},
-	"homepage": "https://github.com/lxl80/vscode-aliyun-oss-paste-image",
+	"homepage": "https://www.lixl.cn/2020/021737756.html",
 	"bugs": {
 		"url": "https://github.com/lxl80/vscode-aliyun-oss-paste-image/issues"
 	},
@@ -21,6 +22,13 @@
 	},
 	"categories": [
 		"Other"
+	],
+	"keywords": [
+		"Aliyun",
+		"OSS",
+		"PasteImage",
+		"upload",
+		"markdown"
 	],
 	"activationEvents": [
 		"onLanguage:markdown"
@@ -37,7 +45,7 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "一键上传截图到阿里云oss插件配置",
+			"title": "上传截图到阿里云oss插件配置",
 			"properties": {
 				"aliyun-oss-paste-image.region": {
 					"type": "string",
@@ -62,7 +70,7 @@
 				"aliyun-oss-paste-image.remotePath": {
 					"type": "string",
 					"default": "",
-					"description": "remotePath，图片存储目录，例如希望的图片地址为http://${你的域名}/static/filename.png，则这里填写static）"
+					"description": "图片存储目录。例如希望的图片地址为http://${你的域名}/static/filename.png，则填写static）"
 				},
 				"aliyun-oss-paste-image.domain": {
 					"type": "string",
@@ -94,8 +102,5 @@
 		"axios": "^0.18.0",
 		"moment": "^2.18.1",
 		"shelljs": "^0.8.3"
-	},
-	"__metadata": {
-		"publisherDisplayName": "悟尘"
 	}
 }

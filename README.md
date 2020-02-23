@@ -16,7 +16,6 @@ VSCode扩展插件，在 Markdown 类型文件编辑过程中，支持一键上�
 喜欢使用 VSCode 的话，可以通过本插件来提高博文撰写体验。
 
 ## 安装
-
 在插件应用商店搜索 `aliyun-oss-paste-image` ，点击 `install` 安装。如图:
 
 ![插件检索及安装](https://pic.lixl.cn/2020/15da665cf0d5309abc2b054508b61d76.png)
